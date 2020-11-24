@@ -32,6 +32,8 @@ public class UserDaoHibernateImpl extends Util implements UserDao {
         } catch (HibernateException e) {
             transaction.rollback();
             e.printStackTrace();
+        } finally {
+            session.close();
         }
     }
 
@@ -49,6 +51,8 @@ public class UserDaoHibernateImpl extends Util implements UserDao {
         } catch (Exception e) {
             transaction.rollback();
             e.printStackTrace();
+        } finally {
+            session.close();
         }
     }
 
@@ -66,6 +70,8 @@ public class UserDaoHibernateImpl extends Util implements UserDao {
         } catch (Exception e) {
             transaction.rollback();
             e.printStackTrace();
+        } finally {
+            session.close();
         }
     }
 
@@ -84,6 +90,8 @@ public class UserDaoHibernateImpl extends Util implements UserDao {
         } catch (Exception e) {
             transaction.rollback();
             e.printStackTrace();
+        } finally {
+            session.close();
         }
     }
 
@@ -102,6 +110,8 @@ public class UserDaoHibernateImpl extends Util implements UserDao {
         } catch (Exception e) {
             transaction.rollback();
             e.printStackTrace();
+        } finally {
+            session.close();
         }
 
         return userList;
@@ -125,6 +135,8 @@ public class UserDaoHibernateImpl extends Util implements UserDao {
         } catch (Exception e) {
             transaction.rollback();
             e.printStackTrace();
+        } finally {
+            session.close();
         }
     }
 }

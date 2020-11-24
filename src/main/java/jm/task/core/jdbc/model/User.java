@@ -1,12 +1,10 @@
 package jm.task.core.jdbc.model;
 
-import org.hibernate.annotations.common.reflection.XProperty;
-
 import javax.persistence.*;
 import java.util.Objects;
 
 @Entity
-@Table(name = "user")
+@Table
 public class User {
 
     @Id

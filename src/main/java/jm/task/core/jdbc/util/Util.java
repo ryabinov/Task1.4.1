@@ -5,14 +5,10 @@ import org.hibernate.SessionFactory;
 import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 import org.hibernate.cfg.Configuration;
 import org.hibernate.cfg.Environment;
-
 import org.hibernate.service.ServiceRegistry;
-
-
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
-
 import java.util.Properties;
 
 
@@ -48,10 +44,10 @@ public class Util {
                 settings.put(Environment.URL, "jdbc:mysql://localhost:3306/db_test1?serverTimezone=Europe/Moscow&useSSL=false");
                 settings.put(Environment.USER, "root");
                 settings.put(Environment.PASS, "Rjhjdf89njxrf!3");
-                settings.put(Environment.DIALECT, "org.hibernate.dialect.MySQL5Dialect");
+                //settings.put(Environment.DIALECT, "org.hibernate.dialect.MySQL5Dialect");
                 settings.put(Environment.SHOW_SQL, "true");
-                settings.put(Environment.CURRENT_SESSION_CONTEXT_CLASS, "thread");
-                settings.put(Environment.HBM2DDL_AUTO, "create-drop");
+                //settings.put(Environment.CURRENT_SESSION_CONTEXT_CLASS, "thread");
+                //settings.put(Environment.HBM2DDL_AUTO, "create-drop");
 
                 configuration.setProperties(settings);
 
@@ -69,8 +65,3 @@ public class Util {
     }
 
 }
-//        dbSetting.put(Environment.URL, "jdbc:mysql://localhost:3306/db_test1?serverTimezone=Europe/Moscow&useSSL=false");
-//        dbSetting.put(Environment.DIALECT, "org.hibernate.dialect.MySQLDialect");
-//        dbSetting.put(Environment.USER, "root");
-//        dbSetting.put(Environment.PASS, "Rjhjdf89njxrf!3");
-//        dbSetting.put(Environment.DRIVER, "com.mysql.cj.jdbc.Driver");

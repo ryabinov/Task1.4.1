@@ -140,6 +140,3 @@ public class UserDaoHibernateImpl extends Util implements UserDao {
         }
     }
 }
-
-
-//://www.journaldev.com/3531/spring-mvc-hibernate-mysql-integration-crud-example-tutorial
